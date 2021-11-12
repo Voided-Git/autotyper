@@ -3,6 +3,10 @@ from keyboard import write, wait, press_and_release
 from os import system
 
 
+# set the window title
+system("title AutoTyper")
+
+
 # inputting integers (error checking)
 def int_input(prompt: str):
     while True:
@@ -20,6 +24,8 @@ while True:
     repeat = int_input("Enter the amount of times the message should be repeated: ")
     # asking for the delay between each message
     delay = int_input("Enter the delay between each message (0 can be used): ")
+    # waiting for 't' to send the messages
+    print("Press 't' to start sending messages.")
 
     # waiting for 't' to be entered (removing the 't' once entered)
     wait("t")
@@ -28,6 +34,7 @@ while True:
     # sending loop
     for _ in range(repeat):
         write(text = message, delay = delay)
+        press_and_release("return")
 
     # when finished
     input("All done! (press enter to continue)")
