@@ -1,4 +1,4 @@
-# Autotyper
+# AutoTyper
 Run, enter the text you want repeatedly typed, enter the amount of time you want the text repeated (or sent) and enter the delay (can be 0).
 
 ## **Disclosure** ##
